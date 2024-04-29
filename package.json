@@ -1,0 +1,22 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "ToDo App",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node src/index.js"
+  },
+  "keywords": [],
+  "author": "Kevin Cruz",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.13.0",
+    "nodemon": "^3.1.0",
+    "prisma": "^5.13.0"
+  }
+}
