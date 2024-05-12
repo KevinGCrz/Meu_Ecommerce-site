@@ -1,177 +1,1705 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body
 {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    padding: 32px;
-    align-items: center;
-    background-color: #181717;
-    color: white;
-    
+   
 }
-
-h1
+.fundo
 {
-    margin-bottom: 30px;
 
-    background: linear-gradient(to right, #FC43B4, #368EF5);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-image: url(https://preview.redd.it/made-a-sticker-bomb-wallpaper-cause-i-got-bored-v0-ni93pdxio5tb1.jpg?auto=webp&s=8d619ff97a6f255c3bda1d42c388b12cfe83f4e5);
+    background-position: center;
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+
 }
 
-.minhas-tarefas
-{
-    background-color: #2e2e2e;
-    width: 70%;
-    margin-top: 20px;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.add-task{
-
-    position: relative;
-    background-color: #2e2e2e;
-    padding: 16px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    height: 50px;
-    width: 70%;
-}
-
-.add-task input
-{
-    flex: 1;
-    background: none;
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 20px;
-}
-
-.add-task button
-{
+.main-container{
+    min-height: 97vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    padding: 8px 16px;
-    height: 40px;
-    width: 80px;
-    transition: 0.3s;
+    
+}
 
-    background-color: #151515;
+/*----------------------------------------NAVBAR*/
+
+.meu-header
+{
+    height: 105px;
+    width: 100%;
+    background-color: #414141;
+
     color: white;
 
-    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 0px 15px black;
+
+    position: relative;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+.menu
+{
+    display: none;
+}
+
+.logo-loja h1
+{
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    color: #92FE6B;
+    text-shadow: 0px 0px 5px black;
+    transition: 0.5s;
+}
+
+.options
+{
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 19px;
+    color: #ff7b57;
+    font-weight: 900;
+    transition: 0.3s;
+    text-shadow: 0px 0px 5px black;
+}
+.options a
+{
+    padding: 0px 2vw;
+}
+.options a:hover
+{
+    transform: scale(1.3);
+    color: #FDD665;
+}
+
+/*----------------------------------------------*/
+
+.intro
+{
+    margin-top: 105px;
+
+    height: 500px;
+    background-color: #161616;
+    color: #92FE6B;
+    border-bottom: 8px solid #92FE6B;
+    box-shadow: 5px 5px 50px black;
+    z-index: -1;
+
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.apresentacao
+{
+    position: absolute;
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 105px;
+
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0px 80px;
+    width: 75vw;
+
+    z-index: 1;
+}
+
+.imagem-intro
+{
+    width: 100%;
+}
+.imagem-intro img
+{
+    width: 100%;
+    height: 500px;
+    opacity: 0.1;
+}
+
+
+/*----------------------------------------------*/
+
+.destaque
+{
+    background-color: #ff4715;
+    color: white;
+    box-shadow: 2px 2px 30px black;
+
+    padding: 10px;
+    border-radius: 55px;
+    transition: 0.3s;
+    width: 60vw;
+
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.destaque h1
+{
+    font-weight: bold;
+}
+.destaque:hover
+{
+    background-color: #ff9215;
+}
+
+/*----------------------------------------------*/
+
+.corpo-vitrine
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.fundo-vitrine
+{
+    margin: 0px 5%;
+
+    background-image:linear-gradient(#202020, #000000);
+    box-shadow: 2px 2px 30px black;
+    width: 80vw; 
+    border-radius: 55px;
+    padding-bottom: 30px;
+}
+.vitrine
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    margin-top: 25px;
+}
+
+.produtoView
+{
+    background-image:linear-gradient(#E55934, rgb(255, 219, 103));
+    border-radius: 35px;
+    padding: 15px;
+    color: white;
+    margin: 0 15px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 10px black;
+
+}
+.produtoView img
+{
+    width: 80%;
+    border-radius: 22px;
+    box-shadow: 2px 2px 10px black;
+}
+.produtoView button
+{
+    background-color: #ff4715;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    border-radius: 35px;
+    box-shadow: 2px 2px 10px black;
+
+}
+.produtoView button:hover
+{
+    background-color: #bd310b;
+}
+.view
+{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+strong
+{
+    background-color: #ff4715;
+    border-radius: 90px;
+    padding: 10px;
+    color: white;
+}
+
+.desc
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 22px;
+}
+.descricao-produto
+{
+    color: #bd310b;
+}
+.preco
+{
+    padding: 8px;
+    font-size: 35px;
+    background-color: white;
+    color: #bd310b;
+    border-radius: 55px;
+    font-weight: 900;
+    width: 70%;
+}
+
+.formulario-titulo
+{
+    background-color: #ff4715;
+    color: white;
+    padding: 5px 20px;
+}
+
+/*----------------------------------------------FOOTER*/
+footer
+{
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background-image:linear-gradient(#414141, #161616);
+    color: #92FE6B;
+    margin-top: 60px;
+
+    position: relative;
+}
+footer a
+{
+    text-decoration: none;
+    color: #92FE6B;
+    font-weight: 900;
+}
+footer p
+{
+    font-size: 18px;
+    font-style: italic;
+}
+footer h1
+{
+    font-weight: 900;
+}
+.footer-view
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    padding: 80px 30px;
+}
+
+.icones
+{
+    display: flex;
+    justify-content: center;
+}
+.icones a
+{
+    background-color: #92FE6B;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 2px 2px 10px black;
+}
+.icones a:hover
+{
+    transform: scale(1.3);
+}
+.icones a i
+{
+    font-size: 70px;
+    color: #1e3b14;
+}
+
+.lojas
+{
+    margin-top: 15px;
+}
+
+.botao-tipo1
+{
+    background-color: #ff4715;
+    color: white;
     cursor: pointer;
-
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 19px;
+    border-radius: 55px;
+    width: 300px;
+    box-shadow: 2px 2px 10px black;
 }
-.add-task button:hover
-{
-    transform: scale(1.1);
-}
 
-.task-list 
+/*----------------------------------------------*/
+
+.back-image-login
 {
+    background-image: url(https://preview.redd.it/made-a-sticker-bomb-wallpaper-cause-i-got-bored-v0-ni93pdxio5tb1.jpg?auto=webp&s=8d619ff97a6f255c3bda1d42c388b12cfe83f4e5);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 97vh;
+}
+.fundo-login
+{
+    background-color: #161616;
+    width: 900px;
+    height: 100%;
+    padding: 60px;
 
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 4px;
+
+    justify-content: center;
+}
+.fundo-login h1
+{
+    color: #92FE6B;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.view-login p
+{
+    color: #E55934;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 900;
+    margin-top: 25px;
+}
+.view-login input
+{
+    padding: 10px;
+    border-radius: 35px;
+    border: none;
 }
 
-.task
+#account-page footer .footer-view
+{
+    text-align: center;
+    display: flex;
+    padding: 30px;
+}
+#account-page footer
+{
+    margin-top: 0px;
+}
+/*----------------------------------------------*/
+
+#admin-home table img
+{
+    height: 50px;
+}
+#admin-home footer .footer-view
+{
+    text-align: center;
+    display: flex;
+    padding: 30px;
+}
+#admin-home footer
+{
+    margin-top: 0px;
+}
+
+.minha-loja
+{
+    margin-top: 105px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #161616;
+    padding: 30px;
+    color: #ff7b57;
+    min-height: 75vh;
+    width: 100%;
+}
+.minha-loja h1
+{
+    font-weight: 900;
+    font-style: italic;
+}
+
+.adm-header
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.adm-header-btn
 {
     display: flex;
+
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 50px;
-    gap: 30px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-.task:hover
-{
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.task p
-{
-    flex: 1;
-    font-size: 18px;
-}
-.task button
-{
-    background: none;
-    border: none;
-    color: red;
-    cursor: pointer;
-}
-
-.no-tasks
-{
-    font-size: 14px;
     text-align: center;
-    opacity: 0.5;
-    display: none;
 }
-
-.no-tasks.active
+.table-produtos
 {
-    display: block;
+    width: 80%;
+    background-color: #414141;
+    border-radius: 25px;
+    margin-top: 45px;
+    font-size: 19px;
 }
-
-.task img 
+.table-produtos td
 {
-    width: 40px; 
-    height: 40px; 
-    transition: 0.2s;
+    padding: 15px;
+    font-weight: bold;
 }
-.task img:hover
+.table-produtos th
 {
-    transform: scale(1.1);
+    background-color: #E55934;
+    padding: 15px;
+    color: white;
 }
-  
-/* Estilizando o checkbox */
-.custom-checkbox {
-    position: relative;
-}
+.table-produtos img
+{
+    border: 2px solid #E55934;
+    border-radius: 15px;
 
-.custom-checkbox input[type="checkbox"] {
-    display: none;
 }
+.opcoes-table
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn-editar
+{
+    padding: 10px 25px;
+    border-radius: 35px;
 
-.custom-checkbox input[type="checkbox"] + label {
-    position: relative;
+    background-color: #E55934;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    font-weight: 900;
+
     cursor: pointer;
-    display: inline-block;
+    text-decoration: none;
+}
+.btn-deletar
+{
+    padding: 10px 25px;
+    border-radius: 35px;
+
+    background-color: #831c1c;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    font-weight: 900;
+
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.custom-checkbox input[type="checkbox"] + label::before 
+/*----------------------------------------------*/
+
+#create-product footer .footer-view
 {
-    content: "";
-    display: inline-block;
+    text-align: center;
+    display: flex;
+    padding: 30px;
+}
+#create-product footer
+{
+    margin-top: 0px;
+}
+
+.add-produto
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    text-align: initial;
+    justify-content: initial;
+    align-items: initial;
+
+    margin-top: 80px;
+}
+.meu-form
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.form-produto
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.titulo-input-form
+{
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.imagem-template
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-template img
+{
+    width: 50%;
+    border-radius: 30px;
+
+    border: 15px solid #E55934; 
+    box-shadow: 2px 2px 10px black;
+}
+
+/*----------------------------------------------*/
+
+#edit-product footer .footer-view
+{
+    text-align: center;
+    display: flex;
+    padding: 30px;
+}
+#edit-product footer
+{
+    margin-top: 0px;
+}
+
+.view-edit
+{
+    margin-top: 105px;
+
+    background-color: #161616;
+    height: 87vh;
+    padding: 20px 50px;
+    color: #ff7b57;
+}
+.view-edit h1
+{
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*----------------------------------------------*/
+
+.view-compras-grid
+{
+    padding-top: 105px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.carrinho
+{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #161616;
+    color: #ff7b57;
+    font-style: italic;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px black;
+    
+    padding: 35px;
+    border-radius: 35px;
+    margin: 35px;
+    
+    text-align: center;
+    justify-content: center;
+    align-items: initial;
+
+    min-height: 60vh;
+    gap: 35px;
+    box-shadow: 0px 0px 20px black;
+}
+.produtos-carrinho
+{
+    display: flex;
+    gap: 50px;
+    background-color: #414141;
+    border-radius: 35px;
+    padding: 25px;
+    height: 200px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 20px black;
+}
+.produtos-carrinho img
+{
+    width: 150px;
+    border-radius: 35px;
+}
+.dados-produto
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 21px;
+    gap: 60px;
+}
+.finalizar-compra
+{
+    font-size: 50px;
+    font-weight: 900;
+    color: #ff7b57;
+    text-shadow: 0px 0px 5px black;
+    
+    background-color: #414141;
+    box-shadow: 0px 0px 20px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    padding: 35px;
+    border-radius: 35px;
+    margin: 35px;
+}
+.carrinho-vazio
+{
+    font-size: 45px;
+    font-weight: 900;
+
+    background-color: #161616;
+    color: #ff7b57;
+    
+    border-radius: 35px;
+    padding: 35px;
+    margin: 65px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+}
+
+.quantidade-produto
+{
+    display: flex;
+}
+
+#cart-page .btn-quantity
+{
     width: 40px;
-    height: 40px;
-    background-image: url('./img/checkbox.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    font-size: 25px;
+    line-height: 34px;
+    padding: 0 0 4px;
 }
 
-.custom-checkbox input[type="checkbox"]:checked + label::before 
+#cart-page .input-quantity
 {
-    background-image: url('./img/check.png');
+    width: 40px;
+    border: 1px solid #ff4715;
+    text-align: center;
+    padding: 0px;
+}
+
+.option-1
+{
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 25px;
+    color: #ff7b57;
+}
+
+/*----------------------------------------------*/
+
+#purchase-page .destaque
+{
+    background-color: #92FE6B;
+    color: #125742
+}
+
+.corpo-minhas-compras
+{
+    margin-top: 150px;
+}
+
+.view-minhas-compras
+{
+    background-color: #202020;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    margin: 55px 80px;
+    border-radius: 55px;
+}
+
+.minhas-compras
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+.minhas-compras-repeat
+{
+    background-color: #414141;
+    padding: 35px;
+    border-radius: 35px;
+}
+
+.produto-vendido h2
+{
+    font-weight: 900;
+    font-style: italic;
+}
+.produto-vendido-desc
+{
+    font-weight: bold;
+}
+.produto-vendido img
+{
+    width: 250px;
+    border-radius: 25px;
+    border: 3px solid #ff4715;
+    margin: 15px 0px;
+}
+
+.info-compra
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 25px;
+}
+.info-full
+{
+    grid-template-columns: 1fr;
+}
+
+.info-compra p
+{
+    background-color: #E55934;
+    padding: 15px 120px;
+    border-radius: 55px;
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+/*--------------------------------------------MOBILE-------------------------------------------*/
+
+@media screen and (max-width: 550px) {
+
+/*----------------------------------------NAVBAR*/
+
+    .meu-header
+    {
+        height: 160px;
+        width: 100%;
+        background-color: #414141;
+
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0px 0px 15px black;
+
+        position: relative;
+        position: fixed;
+        top: 0px;
+        z-index: 2;
+    }
+    .options
+    {
+        display: none;
+    }
+
+    .menu-button i
+    {
+        color: #ff7b57;
+        cursor: pointer;
+        font-size: 25px;
+        border: 2px solid #ff7b57;
+        border-radius: 100px;
+        padding: 10px;
+    }
+
+    .menu
+    {
+        display: inline-flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-itens
+    {
+        position: absolute;
+        top: 140px;
+        width: 90%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #414141;
+        padding: 20px;
+        border-radius: 55px;
+        box-shadow: 0px 0px 15px black;
+    }
+    .menu-itens a
+    {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+
+        color: #ff7b57;
+        background-color: #202020;
+        border-radius: 55px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .menu-itens
+    {
+        display: none;
+    }
+    .menu:hover .menu-itens{
+        display: flex;
+    }
+
+    .logo-loja h1
+    {
+        text-align: center;
+        font-weight: 900;
+        font-style: italic;
+        color: #92FE6B;
+        text-shadow: 0px 0px 5px black;
+        transition: 0.5s;
+        font-size: 45px;
+    }
+
+
+
+/*----------------------------------------------*/
+
+    .vitrine
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        padding: 40px;
+        margin-top: 25px;
+    }
+
+/*----------------------------------------------*/
+
+    .intro
+    {
+        margin-top: 160px;
+
+        height: 400px;
+        background-color: #161616;
+        color: #92FE6B;
+        border-bottom: 8px solid #92FE6B;
+        box-shadow: 5px 5px 50px black;
+        z-index: -1;
+
+        display: flex;
+
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .apresentacao
+    {
+        position: absolute;
+        display: flex;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
+        padding: 0px 80px;
+        width: 90vw;
+
+        z-index: 1;
+    }
+
+    .imagem-intro
+    {
+        width: 100%;
+    }
+    .imagem-intro img
+    {
+        width: 100%;
+        height: 500px;
+        opacity: 0.1;
+    }
+
+
+/*----------------------------------------------*/
+
+    .destaque
+    {
+        background-color: #ff4715;
+        color: white;
+        box-shadow: 2px 2px 30px black;
+
+        padding: 10px;
+        border-radius: 55px;
+        transition: 0.3s;
+        width: 85vw;
+
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    .destaque h1
+    {
+        font-weight: bold;
+    }
+    .destaque:hover
+    {
+        background-color: #ff9215;
+    }
+
+/*----------------------------------------------*/
+
+    footer
+    {
+
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        background-image:linear-gradient(#414141, #161616);
+        color: #92FE6B;
+        margin-top: 60px;
+
+        position: relative;
+    }
+    footer a
+    {
+        text-decoration: none;
+        color: #92FE6B;
+        font-weight: 900;
+    }
+    footer p
+    {
+        font-size: 18px;
+        font-style: italic;
+    }
+    footer h1
+    {
+        font-weight: 900;
+    }
+    .footer-view
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        padding: 50px 30px;
+    }
+
+    .icones
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .icones a
+    {
+        background-color: #92FE6B;
+        padding: 20px;
+        margin: 30px;
+        border-radius: 50%;
+        transition: 0.3s;
+        box-shadow: 2px 2px 10px black;
+    }
+    .icones a:hover
+    {
+        transform: scale(1.3);
+    }
+    .icones a i
+    {
+        font-size: 50px;
+        color: #1e3b14;
+    }
+
+    .lojas
+    {
+        margin-top: 15px;
+    }
+
+/*----------------------------------------------*/
+
+    .view-compras-grid
+    {
+        padding-top: 150px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carrinho
+    {
+        display: flex;
+        flex-direction: column;
+
+        background-color: #161616;
+        color: #ff7b57;
+        font-style: italic;
+        font-weight: 900;
+        text-shadow: 0px 0px 5px black;
+        
+        padding: 35px;
+        border-radius: 35px;
+        margin: 35px 20px;
+        
+        text-align: center;
+        justify-content: center;
+        align-items: initial;
+
+        min-height: 60vh;
+        gap: 35px;
+        box-shadow: 0px 0px 20px black;
+    }
+    .produtos-carrinho
+    {
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+        background-color: #414141;
+        border-radius: 35px;
+        padding: 25px;
+        height: 100%;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 20px black;
+    }
+    .produtos-carrinho button
+    {
+        padding: 25px;
+        width:100%;
+    }
+
+    .produtos-carrinho img
+    {
+        width: 150px;
+        border-radius: 35px;
+    }
+    .dados-produto
+    {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 21px;
+        gap: 0px;
+    }
+
+    .finalizar-compra
+    {
+        font-size: 40px;
+        font-weight: 900;
+        color: #ff7b57;
+        text-shadow: 0px 0px 5px black;
+        
+        background-color: #414141;
+        box-shadow: 0px 0px 20px black;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        padding: 35px;
+        border-radius: 35px;
+        margin: 15px;
+    }
+
+    .carrinho-vazio
+    {
+        font-size: 35px;
+        font-weight: 900;
+
+        background-color: #161616;
+        color: #ff7b57;
+        
+        border-radius: 35px;
+        padding: 35px;
+        margin: 65px;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 55vh;
+    }
+    .carrinho-vazio a
+    {
+        width: 90%;
+    }
+
+    .quantidade-produto
+    {
+        display: flex;
+    }
+
+    #cart-page .btn-quantity
+    {
+        width: 40px;
+        font-size: 25px;
+        line-height: 34px;
+        padding: 0 0 4px;
+    }
+
+    #cart-page .input-quantity
+    {
+        width: 40px;
+        border: 1px solid #ff4715;
+        text-align: center;
+        padding: 0px;
+    }
+
+/*----------------------------------------------*/
+
+    #purchase-page .destaque
+    {
+        background-color: #92FE6B;
+        color: #125742
+    }
+
+    .corpo-minhas-compras
+    {
+        margin-top: 210px;
+    }
+
+    .view-minhas-compras
+    {
+        background-color: #202020;
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        margin: 35px 15px;
+        border-radius: 55px;
+    }
+
+    .minhas-compras
+    {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+    }
+    .minhas-compras-repeat
+    {
+        background-color: #414141;
+        padding: 35px;
+        border-radius: 35px;
+    }
+
+    .produto-vendido h2
+    {
+        font-weight: 900;
+        font-style: italic;
+    }
+    .produto-vendido-desc
+    {
+        font-weight: bold;
+    }
+    .produto-vendido img
+    {
+        width: 150px;
+        border-radius: 25px;
+        border: 3px solid #ff4715;
+        margin: 15px 0px;
+    }
+
+    .info-compra
+    {
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        
+        gap: 0px;
+        padding: 25px;
+    }
+    .info-full
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .info-compra p
+    {
+        background-color: #E55934;
+        padding: 10px 120px;
+        border-radius: 55px;
+
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+/*----------------------------------------------*/
+
+    #admin-home table img
+    {
+        height: 50px;
+    }
+    #admin-home footer .footer-view
+    {
+        text-align: center;
+        display: flex;
+        padding: 30px;
+    }
+    #admin-home footer
+    {
+        margin-top: 0px;
+    }
+
+    .minha-loja
+    {
+        margin-top: 105px;
+
+        background-color: #161616;
+        padding: 30px;
+        color: #ff7b57;
+        min-height: 75vh;
+    }
+    .minha-loja h1
+    {
+        font-weight: 900;
+        font-style: italic;
+    }
+
+/*----------------------------------------------*/
+
+    #admin-home table img
+    {
+        height: 50px;
+    }
+    #admin-home footer .footer-view
+    {
+        text-align: center;
+        display: flex;
+        padding: 30px;
+    }
+    #admin-home footer
+    {
+        margin-top: 0px;
+    }
+
+    .minha-loja
+    {
+        margin-top: 150px;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #161616;
+        padding: 30px;
+        color: #ff7b57;
+        min-height: 75vh;
+        width: 100%;
+    }
+    .minha-loja h1
+    {
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    .adm-header
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .adm-header-btn
+    {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .table-produtos
+    {
+        width: 100%;
+        background-color: #414141;
+        border-radius: 25px;
+        margin-top: 45px;
+        font-size: 15px;
+    }
+    .table-produtos td
+    {
+        padding: 30px 5px;
+        font-weight: bold;
+        border-bottom:1px solid #161616;
+    }
+    .table-produtos th
+    {
+        background-color: #E55934;
+        padding: 15px;
+        color: white;
+    }
+    .table-produtos img
+    {
+        border: 2px solid #E55934;
+        border-radius: 15px;
+
+    }
+    .opcoes-table
+    {
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .btn-editar
+    {
+        padding: 5px 25px;
+        border-radius: 18px;
+
+        background-color: #E55934;
+        box-shadow: 2px 2px 10px black;
+        color: white;
+        font-weight: 900;
+
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .btn-deletar
+    {
+        padding: 5px 25px;
+        border-radius: 18px;
+
+        background-color: #831c1c;
+        box-shadow: 2px 2px 10px black;
+        color: white;
+        font-weight: 900;
+
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+/*----------------------------------------------*/
+
+    #create-product footer .footer-view
+    {
+        text-align: center;
+        display: flex;
+        padding: 30px;
+    }
+    #create-product footer
+    {
+        margin-top: 0px;
+    }
+
+    .fundo-view-edit
+    {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 95px;
+        background-color: #161616;
+        width: 100%;
+        padding-bottom: 105px;
+    }
+
+    .add-produto
+    {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 80px;
+        gap: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .opcao-form-produto
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .meu-form
+    {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+    }
+    
+    .form-produto
+    {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        gap: 20px;
+    }
+    .form-produto button
+    {
+        width: 100%;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .titulo-input-form
+    {
+        font-size: 20px;
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    .imagem-template
+    {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem-template img
+    {
+        width: 50%;
+        border-radius: 30px;
+
+        border: 15px solid #E55934; 
+        box-shadow: 2px 2px 10px black;
+    }
+
+    #edit-product footer .footer-view
+    {
+        text-align: center;
+        display: flex;
+        padding: 30px;
+    }
+    #edit-product footer
+    {
+        margin-top: 0px;
+    }
+
+    .view-edit
+    {
+        height: 100%;
+        padding: 20px 50px;
+        color: #ff7b57;
+    }
+    .view-edit h1
+    {
+        font-weight: 900;
+        font-style: italic;
+    }
+
+/*----------------------------------------------*/
+
+    .back-image-login
+    {
+        background-image: url(https://preview.redd.it/made-a-sticker-bomb-wallpaper-cause-i-got-bored-v0-ni93pdxio5tb1.jpg?auto=webp&s=8d619ff97a6f255c3bda1d42c388b12cfe83f4e5);
+        background-position:center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        height: 97vh;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .fundo-login
+    {
+        background-color: #161616;
+        width: 87%;
+        height: 92%;
+
+        padding: 40px;
+        margin: 0 auto;
+        border-radius: 55px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .fundo-login h1
+    {
+        color: #92FE6B;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .view-login p
+    {
+        color: #E55934;
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 900;
+        margin-top: 25px;
+    }
+    .view-login a
+    {
+        background-color: #E55934;
+        color: wheat;
+
+        text-decoration: none;
+
+        font-size: 18px;
+        font-style:normal;
+        font-weight: 900;
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 15px;
+
+        margin-top: 25px;
+    }
+    .view-login button
+    {
+        margin: 25px 0px;
+    }
+    .view-login input
+    {
+        padding: 10px;
+        border-radius: 35px;
+        border: none;
+    }
+
+    #account-page footer .footer-view
+    {
+        text-align: center;
+        display: flex;
+        padding: 30px;
+    }
+    #account-page footer
+    {
+        margin-top: 0px;
+    }
+/*----------------------------------------------*/
+
 }

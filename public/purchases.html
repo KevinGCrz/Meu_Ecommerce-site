@@ -10,30 +10,22 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     
-    <title>EComerce</title>
+    <title>Purchases</title>
   </head>
-  <body class="fundo" ng-controller="HomeController">
+  <body id="purchase-page" class="fundo" ng-controller="PurchasesController">
     
     <!---------------------------------------------->
 
     <nav class="meu-header">
 
-      <div class="logo-loja">
-        <h1>Bomb Rush Style</h1>
-      </div>
+      <div class="logo-loja"><h1>Bomb Rush Style</h1></div>
 
       <div class="options">
-
         <a href="/" class="nav-link active" aria-current="page">Home</a>
-        <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho<i class="fa fa-shopping-cart"></i></a>
-
-        <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar</a>
-
-        <a ng-if="isAuthenticated" href="/purchases.html" class="nav-link" aria-current="page">Minhas compras</a>
+        <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho</a>
         <a ng-if="isAuthenticated && isAdmin" href="/admin/" class="nav-link" aria-current="page">Admin</a>
-
+        <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar</a>
         <a ng-if="isAuthenticated" ng-click="logout()" href="/" class="nav-link" aria-current="page">Sair</a>  
-      
       </div>
 
       <!---MOBILE------------------------------------------------>
@@ -42,63 +34,67 @@
         <a class="menu-button"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></i></a>
         <div class="menu-itens">
           <a href="/" class="nav-link active" aria-current="page">Home</a>
-          <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho<i class="fa fa-shopping-cart"></i></a>
-          <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar</a>
-          <a ng-if="isAuthenticated" href="/purchases.html" class="nav-link" aria-current="page">Minhas compras</a>
+          <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho</a>
           <a ng-if="isAuthenticated && isAdmin" href="/admin/" class="nav-link" aria-current="page">Admin</a>
+          <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar</a>
           <a ng-if="isAuthenticated" ng-click="logout()" href="/" class="nav-link" aria-current="page">Sair</a>  
-        </div>
+         </div>
       </div>
 
       <!---MOBILE------------------------------------------------>
 
     </nav>
 
+
     <!---------------------------------------------->
     
-    <div class="intro">
-
-      <div class="apresentacao">
-        <p>"Conheça a Bomb Rush Style, sua loja de moda skatista favorita! Aqui, celebramos o estilo único e a personalidade de cada skatista. Com uma seleção cuidadosa de roupas e acessórios, ajudamos você a expressar sua autenticidade nas pistas e nas ruas. Venha nos visitar e descubra como podemos elevar o seu estilo para o próximo nível!"</p>
-      </div>
-      <div class="imagem-intro">
-        <img src="https://www.speedrun.com/static/theme/jredyeqw/background.png?v=ac5d269" alt="">
-      </div>
-
-    </div>
-
-    <!---------------------------------------------->
-    <div class="corpo-vitrine">
+    <div class="corpo-minhas-compras">
 
       <div class="destaque">
-        <h1>🔥 Nosso destaque! 🔥</h1>
+        <h1>🛒 Minhas compras 🛒</h1>
       </div>
-
-      <div class="fundo-vitrine">
-        <div class="vitrine">
-            <div class="produtoView" ng-repeat="product in products">
-              
-              <div class="view">
-                <strong>#{{ product.id }}</strong>
-                <h2>{{ product.name }}</h2>
-              </div>
-
-              <img ng-src="{{ product.imageUrl }}" alt="">
-
-              <div class="desc">
-                <p>★ ★ ★ ★ ★</p>
-                <p class="descricao-produto">{{ product.description }}</p>
-                <p class="preco">R$ {{ product.price }}</p>
-              </div>
-
-              <button type="button" ng-click="addToCart(product.id)" class="btn">ADICIONAR AO CARRINHO!</button>
-            
-            </div>
+  
+      <div class="view-minhas-compras" ng-repeat="cart in carts">
+  
+        <div class="info-compra">
+          <p>#{{ cart.id }}</p>
+          <p>{{ cart.closedAt }}</p>
         </div>
+  
+        <div class="minhas-compras">
+  
+          <div class="minhas-compras-repeat" ng-repeat="item in cart.items">
+  
+            <div class="produto-vendido">
+              <h2>{{  item.product.name }}</h2>
+              
+              <img ng-src="{{ item.product.imageUrl }}" alt="">
+  
+              <div class="produto-vendido-desc">
+                <p class="">{{  item.product.description }}</p>
+                <p class="">R$ {{ item.price | currency }}</p>
+                <p class="">X {{ item.quantity }}</p>
+                <p>Total: {{ item.price * item.quantity | currency }}</p>
+              </div>
+            </div>
+    
+          </div>
+  
+        </div>
+  
+        <div class="info-compra info-full">
+          <p>Total gasto: {{ cart.total | currency }}</p>
+        </div>
+  
+      </div>
+  
+  
+      <div ng-if="carts.length == 0" class="carrinho-vazio">
+        <p>Nenhum produto comprado :(</p>
+        <a class="botao-tipo1" href="/">Bora as compras!</a>
       </div>
 
     </div>
-        
 
     <!---------------------------------------------->
 
@@ -126,19 +122,18 @@
           <div class="icones">
             <a href="https://github.com/KevinGCrz"><i class="fa-brands fa-github"></i></a>
           </div>
-          <p>Identidade visual inspirada em:</p>
-            <a href="https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/">Bomb Rush Cyberfunk</a>
         </div>
       </div>
 
   </footer>
  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./assets/js/app.js"></script>
+
     <script src="./assets/js/lib/jwd-decode.js"></script>
+    <script src="./assets/js/app.js"></script>
     <script src="./assets/js/services/session.service.js"></script>
     <script src="./assets/js/services/admin.service.js"></script>
-    <script src="./assets/js/controllers/home.controller.js"></script>
+    <script src="./assets/js/controllers/purchases.controller.js"></script>
 
   </body>
 </html>

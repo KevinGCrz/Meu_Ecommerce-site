@@ -12,11 +12,19 @@
   "type": "module",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "express": "^4.19.2"
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0"
   },
   "devDependencies": {
     "@prisma/client": "^5.13.0",
     "nodemon": "^3.1.0",
     "prisma": "^5.13.0"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   }
 }
