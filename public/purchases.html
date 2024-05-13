@@ -12,7 +12,7 @@
     
     <title>Purchases</title>
   </head>
-  <body id="purchase-page" class="fundo" ng-controller="PurchasesController">
+  <body id="purchase-page" class="fundo2" ng-controller="PurchasesController">
     
     <!---------------------------------------------->
 
@@ -21,11 +21,11 @@
       <div class="logo-loja"><h1>Bomb Rush Style</h1></div>
 
       <div class="options">
-        <a href="/" class="nav-link active" aria-current="page">Home</a>
-        <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho</a>
-        <a ng-if="isAuthenticated && isAdmin" href="/admin/" class="nav-link" aria-current="page">Admin</a>
-        <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar</a>
-        <a ng-if="isAuthenticated" ng-click="logout()" href="/" class="nav-link" aria-current="page">Sair</a>  
+        <a href="/" class="nav-link active" aria-current="page">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+        <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho <i class="fa fa-shopping-cart"></i></a>
+        <a ng-if="isAuthenticated && isAdmin" href="/admin/" class="nav-link" aria-current="page">Admin <i class="fa fa-lock" aria-hidden="true"></i></a>
+        <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+        <a ng-if="isAuthenticated" ng-click="logout()" href="/" class="nav-link" aria-current="page">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>  
       </div>
 
       <!---MOBILE------------------------------------------------>
@@ -33,11 +33,11 @@
       <div class="menu">
         <a class="menu-button"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></i></a>
         <div class="menu-itens">
-          <a href="/" class="nav-link active" aria-current="page">Home</a>
-          <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho</a>
-          <a ng-if="isAuthenticated && isAdmin" href="/admin/" class="nav-link" aria-current="page">Admin</a>
-          <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar</a>
-          <a ng-if="isAuthenticated" ng-click="logout()" href="/" class="nav-link" aria-current="page">Sair</a>  
+          <a href="/" class="nav-link active" aria-current="page">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+          <a ng-if="isAuthenticated" href="/cart.html" class="nav-link" aria-current="page">Carrinho <i class="fa fa-shopping-cart"></i></a>
+          <a ng-if="isAuthenticated && isAdmin" href="/admin/" class="nav-link" aria-current="page">Admin <i class="fa fa-lock" aria-hidden="true"></i></a>
+          <a ng-if="!isAuthenticated" href="/login.html" class="nav-link" aria-current="page">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+          <a ng-if="isAuthenticated" ng-click="logout()" href="/" class="nav-link" aria-current="page">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>  
          </div>
       </div>
 

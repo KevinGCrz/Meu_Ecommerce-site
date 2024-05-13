@@ -3,10 +3,19 @@ body
     min-height: 100vh;
    
 }
-.fundo
+.fundo1
 {
 
     background-image: url(https://preview.redd.it/made-a-sticker-bomb-wallpaper-cause-i-got-bored-v0-ni93pdxio5tb1.jpg?auto=webp&s=8d619ff97a6f255c3bda1d42c388b12cfe83f4e5);
+    background-position: center;
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+
+}
+.fundo2
+{
+
+    background-image: url(https://www.speedrun.com/static/theme/jredyeqw/background.png?v=ac5d269);
     background-position: center;
     background-size: 150% 100%;
     background-repeat: no-repeat;
@@ -32,7 +41,7 @@ body
     color: white;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 
     text-align: left;
     justify-content: center;
@@ -371,6 +380,12 @@ footer h1
     background-repeat: no-repeat;
     height: 97vh;
 }
+.meu-login
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
 .fundo-login
 {
     background-color: #161616;
@@ -397,13 +412,36 @@ footer h1
     font-size: 22px;
     font-style: italic;
     font-weight: 900;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .view-login input
 {
     padding: 10px;
     border-radius: 35px;
     border: none;
+}
+.view-login a
+{
+    background-color: #E55934;
+    color: wheat;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-style:normal;
+    font-weight: 900;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 15px;
+
+    margin-top: 0px;
+    text-align: center;
+}
+
+.meu-login button
+{
+    margin:45px 0px;
+    width: 100%;
 }
 
 #account-page footer .footer-view
@@ -846,7 +884,7 @@ footer h1
 
 /*--------------------------------------------MOBILE-------------------------------------------*/
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1110px) {
 
 /*----------------------------------------NAVBAR*/
 
@@ -942,7 +980,7 @@ footer h1
         color: #92FE6B;
         text-shadow: 0px 0px 5px black;
         transition: 0.5s;
-        font-size: 45px;
+        font-size: 40px;
     }
 
 
@@ -958,7 +996,7 @@ footer h1
         justify-content: center;
         align-items: center;
 
-        padding: 40px;
+        padding: 15px;
         margin-top: 25px;
     }
 
@@ -990,10 +1028,10 @@ footer h1
         justify-content: center;
         align-items: center;
 
-        font-size: 18px;
+        font-size: 16px;
         font-style: italic;
         font-weight: bold;
-        padding: 0px 80px;
+        padding: 0px 50px;
         width: 90vw;
 
         z-index: 1;
@@ -1069,8 +1107,8 @@ footer h1
     }
     .footer-view
     {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
 
         align-items: center;
         text-align: center;
@@ -1088,7 +1126,7 @@ footer h1
     {
         background-color: #92FE6B;
         padding: 20px;
-        margin: 30px;
+        margin: 15px;
         border-radius: 50%;
         transition: 0.3s;
         box-shadow: 2px 2px 10px black;
@@ -1622,7 +1660,7 @@ footer h1
         background-position:center;
         background-size:cover;
         background-repeat: no-repeat;
-        height: 97vh;
+        height: auto;
 
         display: flex;
         flex-direction: column;
@@ -1634,12 +1672,11 @@ footer h1
     .fundo-login
     {
         background-color: #161616;
-        width: 87%;
-        height: 92%;
+        width: 85%;
 
         padding: 40px;
-        margin: 0 auto;
-        border-radius: 55px;
+        margin: 40px;
+        border-radius: 35px;
 
         display: flex;
         flex-direction: column;
@@ -1652,7 +1689,7 @@ footer h1
         color: #92FE6B;
         font-weight: 900;
         font-style: italic;
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 25px;
     }
     .view-login p
@@ -1661,6 +1698,7 @@ footer h1
         font-size: 22px;
         font-style: italic;
         font-weight: 900;
+        margin: 0px;
         margin-top: 25px;
     }
     .view-login a
@@ -1677,17 +1715,24 @@ footer h1
         cursor: pointer;
         padding: 15px;
 
-        margin-top: 25px;
+        margin-top: 0px;
     }
     .view-login button
     {
-        margin: 25px 0px;
+        margin: 50px 0px;
     }
     .view-login input
     {
         padding: 10px;
         border-radius: 35px;
         border: none;
+    }
+    .meu-login
+    {
+        display: flex;
+        flex-direction: column;
+
+        gap: 0px;
     }
 
     #account-page footer .footer-view
@@ -1701,5 +1746,23 @@ footer h1
         margin-top: 0px;
     }
 /*----------------------------------------------*/
+
+    .fundo1
+    {
+
+        background-image: url(https://preview.redd.it/made-a-sticker-bomb-wallpaper-cause-i-got-bored-v0-ni93pdxio5tb1.jpg?auto=webp&s=8d619ff97a6f255c3bda1d42c388b12cfe83f4e5);
+        background-position: center;
+        background-size: 150%;
+        background-repeat: repeat;
+    }
+    .fundo2
+    {
+
+        background-image: url(https://www.speedrun.com/static/theme/jredyeqw/background.png?v=ac5d269);
+        background-position: center;
+        background-size: 150%;
+        background-repeat: repeat;
+
+    }
 
 }
